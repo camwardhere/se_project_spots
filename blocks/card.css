@@ -4,7 +4,7 @@
 
 .card__image {
   height: 413px;
-  width: 413px;
+  width: 100%;
   border-radius: 8px;
   object-fit: cover;
   display: block;
@@ -44,7 +44,7 @@
 
 @media screen and (max-width: 627px) {
   .card__title {
-    min-width: 250px;
+    max-width: 250px;
     font-size: 16px;
   }
 

@@ -45,6 +45,7 @@
 }
 
 .profile__edit-btn {
+  color: #212121;
   display: flex;
   gap: 8px;
   padding: 0;
@@ -63,6 +64,10 @@
 }
 
 .profile__add-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
   margin-left: auto;
   width: 149px;
   height: 52px;
@@ -74,7 +79,7 @@
   line-height: 100%;
   color: rgba(252, 245, 229, 1);
   background-color: #212121;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 .profile__add-btn:hover {
@@ -103,7 +108,7 @@
   }
 
   .profile__description {
-    margin: 20px;
+    margin-bottom: 32px;
   }
 
   .profile__column {
