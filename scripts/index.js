@@ -16,6 +16,9 @@ const newPostForm = newPostModal.querySelector(".modal__form");
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
 
+const cardCaptionInput = document.querySelector("#card-caption-input");
+const cardImageInput = document.querySelector("#card-image-input");
+
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
 }
@@ -59,3 +62,10 @@ function handleNewPostSubmit(evt) {
 }
 
 newPostForm.addEventListener("submit", handleNewPostSubmit);
+
+function handleNewPostSubmit(evt) {
+  evt.preventDefault();
+  console.log(cardCaptionInput.value);
+  console.log(cardImageInput.value);
+  newPostModal.classList.remove("modal_is-opened");
+}
