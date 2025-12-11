@@ -11,7 +11,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 0 10px;
+}
+
+.modal_type_preview {
+  padding: 0 16px;
 }
 
 .modal_is-opened {
@@ -42,6 +46,16 @@
   border: none;
   cursor: pointer;
   opacity: 0.4;
+}
+
+.modal__close_type_preview {
+  top: 0;
+  right: -50px;
+  background: url(../images/spots-images/Close\ Icon\ -\ white.svg);
+}
+
+.modal__close_type_preview:hover {
+  opacity: 40%;
 }
 
 .modal__close-btn:hover,
@@ -109,6 +123,28 @@
   color: #2121214d;
 }
 
+.modal__image-container {
+  position: relative;
+}
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vw;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 8px;
+}
+.modal__caption {
+  color: white;
+  bottom: 4px;
+  left: 8px;
+  background-color: #212121;
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 4px;
+  max-width: 90%;
+}
+
 @media screen and (max-width: 320px) {
   .modal__container {
     padding: 22px 12px 12px;
@@ -129,5 +165,16 @@
   .modal__close-btn {
     top: 22px;
     right: 12px;
+  }
+}
+
+@media screen and (max-width: 627px) {
+  .modal__close_type_preview {
+    top: -48px;
+    right: 0;
+  }
+
+  .modal__image {
+    min-width: unset;
   }
 }

@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   max-width: 413px;
 }
 
@@ -28,6 +29,26 @@
   justify-content: space-between;
 }
 
+.card__delete-btn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/spots-images/State=Default.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../images/spots-images/State=Hover.svg);
+  opacity: 1;
+}
+
 .card__like-btn {
   cursor: pointer;
   background-image: url(../images/spots-images/Union.svg);
@@ -40,6 +61,15 @@
 
 .card__like-btn:hover {
   opacity: 1;
+}
+
+.card__like-btn_active {
+  background-image: url(../images/spots-images/red\ heart.svg);
+  opacity: 1;
+}
+
+.card__like-btn_active:hover {
+  opacity: 0.4;
 }
 
 @media screen and (max-width: 627px) {
