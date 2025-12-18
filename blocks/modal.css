@@ -1,7 +1,7 @@
 .modal {
   visibility: hidden;
   opacity: 0;
-  transition: 0.3s;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -21,8 +21,6 @@
 .modal_is-opened {
   visibility: visible;
   opacity: 1;
-  transition: 0.3s;
-  transition-delay: 0.3s;
 }
 
 .modal__container {
@@ -48,14 +46,14 @@
   opacity: 0.4;
 }
 
-.modal__close_type_preview {
+.modal__close-btn_type_preview {
   top: 0;
   right: -50px;
   background: url(../images/spots-images/Close\ Icon\ -\ white.svg);
 }
 
-.modal__close_type_preview:hover {
-  opacity: 40%;
+.modal__close-btn_type_preview:hover {
+  opacity: 0.4;
 }
 
 .modal__close-btn:hover,
@@ -72,7 +70,6 @@
   width: 100%;
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
-  gap: 8px;
   color: #fcf5e5;
   cursor: pointer;
 }
@@ -128,21 +125,20 @@
 }
 .modal__image {
   max-width: 80vw;
-  max-height: 80vw;
+  max-height: 80vh;
   width: 100%;
   object-fit: contain;
   display: block;
   border-radius: 8px;
 }
 .modal__caption {
+  position: absolute;
+  z-index: 1;
   color: white;
-  bottom: 4px;
-  left: 8px;
   background-color: #212121;
   display: inline-block;
   padding: 4px 8px;
   border-radius: 4px;
-  max-width: 90%;
 }
 
 @media screen and (max-width: 320px) {
